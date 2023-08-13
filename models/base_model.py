@@ -8,6 +8,7 @@ import uuid
 from datetime import datetime
 import models
 
+
 class BaseModel:
     """
     Represent the BaseModel class to take care of the initialization,
@@ -28,6 +29,7 @@ class BaseModel:
             for key, val in kwargs.items():
                 if "__class__" not in key:
                     setattr(self, key, val)
+
     def __str__(self):
         """String representation of a BaseModel instance"""
         return ("[{}] ({}) {}".format(self.__class__.__name__,
